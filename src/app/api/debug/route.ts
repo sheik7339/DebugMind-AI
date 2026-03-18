@@ -7,7 +7,7 @@ export async function POST(req: Request) {
     
     // Key sourcing logic
     const customKey = req.headers.get("x-gemini-key");
-    const MASTER_KEY = "AIzaSyDFUsyagMfDGOsXLqGWoMajpQaYxvF37bM";
+    const MASTER_KEY = process.env.GEMINI_API_KEY || "";
     
     const isValidKey = (k: any) => k && typeof k === 'string' && k.length > 20 && !k.includes("your-");
     const TARGET_KEY = isValidKey(customKey) ? customKey!.trim() : MASTER_KEY;
