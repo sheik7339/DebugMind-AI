@@ -1,16 +1,8 @@
 import { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import GithubProvider from "next-auth/providers/github";
-import { SupabaseAdapter } from "@auth/supabase-adapter";
 
 export const authOptions: NextAuthOptions = {
-  // Real Database Sync: Automatically creates users in Supabase
-  adapter: (process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY) 
-    ? SupabaseAdapter({
-        url: process.env.NEXT_PUBLIC_SUPABASE_URL,
-        secret: process.env.SUPABASE_SERVICE_ROLE_KEY,
-      })
-    : undefined,
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID || "",
