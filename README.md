@@ -1,6 +1,6 @@
 # 🧠 DebugMind AI
 
-![DebugMind AI Preview](https://debug-mind-ai.vercel.app/logo.png) <!-- Assuming a logo or just a placeholder for aesthetics -->
+![DebugMind AI Preview](./public/preview.png)
 
 **Live Demo:** [https://debug-mind-ai.vercel.app/](https://debug-mind-ai.vercel.app/)
 
